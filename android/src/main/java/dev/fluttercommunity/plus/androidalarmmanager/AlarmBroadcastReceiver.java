@@ -103,7 +103,7 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
       assert notificationManager != null;
 
       String CHANNEL_ID = "NOTIFICATION_CHANNEL_ID";
-      String CHANNEL_NAME = "Water Watch Notification";
+      String CHANNEL_NAME = "Water Reminder Notification";
 
       NotificationChannel mChannel = notificationManager.getNotificationChannel(CHANNEL_ID);
       if (mChannel == null) {
@@ -116,10 +116,10 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
       NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
 
       builder
-          .setSmallIcon(context.getResources().getIdentifier("ic_water_droplet", "drawable", context.getPackageName()))
-          .setColor(0XFF2C64F5)
+          .setSmallIcon(context.getResources().getIdentifier("ic_clock", "drawable", context.getPackageName()))
+          .setColor(0XFF255AF5)
           .setContentTitle("Time to drink water!")
-          .setContentText("Drink water with water watch")
+          .setContentText("Hydrate now for a healthier you!")
           .setPriority(NotificationCompat.PRIORITY_HIGH)
           .setCategory(NotificationCompat.CATEGORY_CALL)
           .setVibrate(new long[] { 1000, 1000, 1000})
